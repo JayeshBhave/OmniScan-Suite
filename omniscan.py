@@ -44,7 +44,7 @@ def explore_directories(base_url, directory_list, thread_id, num_threads):
     global checked_directories
 
     for i in range(len(directory_list)):
-        if i % num_threads == thread_id:  # Distribute directories among threads
+        if i % num_threads == thread_id:
             directory = directory_list[i]
             url = f"{base_url}/{directory}"
             response = requests.head(url)
